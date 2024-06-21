@@ -12,7 +12,6 @@ def download_file(url: str, filenames: list[str], output_path: str) -> list[str]
     output_paths = []
     for filename in filenames:
         assert filename[-7:] == ".tsv.gz", "File should have a '.tsv.gz' extension specified."
-            
         response = requests.get(url+filename, stream=True)
         if response.status_code == 200:
             output_paths.append(output_path+filename)

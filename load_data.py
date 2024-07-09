@@ -26,7 +26,7 @@ def load_to_dataframe(path_to_file: str) -> pd.DataFrame:
                        compression="gzip",
                        header=0,
                        sep="\t",
-                       on_bad_lines="warn")
+                       on_bad_lines="warn").replace(to_replace=r"\N", value=pd.NA)
 
 if __name__ == "__main__":
     url = "https://datasets.imdbws.com/" # should end with "/"

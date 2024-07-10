@@ -1,13 +1,17 @@
-# from importlib import reload
-# import load_data
-# reload(load_data)
+from importlib import reload
 import numpy as np
 import pandas as pd
 from load_data import *
-import task2
+
+import countries
+reload(countries)
+import countries
+
 from langdetect import detect
 import translitcodec
 import codecs
+
+from datetime import datetime
 
 def load_dataframes(path1, path2, path3):
     df1 = load_to_dataframe(path1)
@@ -71,7 +75,7 @@ def prepareDataset(df, df3):
     #
     # zamieniamy wszystkie tytuły na lowercase i dekodujemy narodowe znaki
     df["title"] = df["title"].astype(str).str.lower().apply(lambda x: codecs.encode(str(x), 'translit/short'))
-
+    
     # 2 Wydobycie krajów
     #
     # wydostajemy kandydatów na filmy z których odzyskamy kraje
@@ -108,10 +112,11 @@ def prepareDataset(df, df3):
     ).dropna()
     
     df_analysis = languageModel(df_analysis)
+    df_analysis = df_analysis.loc[df_analysis["region"].isin(list(countries.countries.keys()))]
     
     return df_analysis
 
-def properAnalysis(df_analysis, K = 1000, N = 100):
+def properAnalysis(df_analysis, K = 1000, N = 100, file = None):
     ret_df = df_analysis.loc[df_analysis["numVotes"] > K].sort_values(
         by="averageRating", ascending=False
     ).head(
@@ -123,11 +128,50 @@ def properAnalysis(df_analysis, K = 1000, N = 100):
         ascending=False
     ).index
     
-    print(f"Top {N} countries - ranking")
+    if file is None:
+        print(f"Top {N} movies - ranking")
+    else:
+        with open(file, "a") as f:
+            f.write(f"Top {N} movies - ranking\n")
+            
     for i, x in enumerate(list(ret_df)):
-        try:
-            print(f"{i+1}. {task2.countries[x]}")
-        except:
-            print(f"{i+1}. {x}")
+        if i == 10:
+            break
+        
+        if file is None:
+            print(f"{i+1}. {countries.countries[x]}")
+        else:
+            with open(file, "a") as f:
+                f.write(f"{i+1}. {countries.countries[x]}\n")
+            
+    return [countries.countries[x] for i, x in enumerate(list(ret_df)) if i < 10]
+
+def answerRanks(df_analysis, Ks, Ns, file = None):
+    if file is not None:
+        with open(file, "w") as f:
+            f.write(f"New analysis: {datetime.now()}\n\n")
+    rank = {}
+    for K in Ks:
+        if file is None:
+            print(f"Threshold: {K}")
+        else:
+            with open(file, "a") as f:
+                f.write(f"Threshold: {K}\n")
+            
+        rank[K] = {}
+        for N in Ns:
+            pa = properAnalysis(df_analysis, K = K, N = N, file = file)
+            rank[K][N] = pa[:min(10, len(pa))]
+            if file is None:
+                print()
+            else:
+                with open(file, "a") as f:
+                    f.write("\n")
+        if file is None:
+            print("-"*40)
+        else:
+            with open(file, "a") as f:
+                f.write("-"*40+"\n\n")
+    return rank
     
     

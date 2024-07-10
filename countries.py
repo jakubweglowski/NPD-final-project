@@ -243,5 +243,6 @@ countries = {val: key for key, val in {
     "Western Sahara": "EH",
     "Yemen": "YE",
     "Zambia": "ZM",
-    "Zimbabwe": "ZW"
+    "Zimbabwe": "ZW",
+    "Yugoslavia": "YUCS"
 }.items()}

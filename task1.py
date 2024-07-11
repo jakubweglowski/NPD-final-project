@@ -144,13 +144,15 @@ def properAnalysis(df_analysis, K = 1000, N = 100, file = None):
             with open(file, "a") as f:
                 f.write(f"{i+1}. {countries.countries[x]}\n")
             
-    return [countries.countries[x] for i, x in enumerate(list(ret_df)) if i < 10]
+    return [countries.countries[x] for x in list(ret_df)]
 
 def answerRanks(df_analysis, Ks, Ns, file = None):
     if file is not None:
         with open(file, "w") as f:
             f.write(f"New analysis: {datetime.now()}\n\n")
     rank = {}
+    Ns = list(Ns)
+    Ns.append(df_analysis.shape[0])
     for K in Ks:
         if file is None:
             print(f"Threshold: {K}")
@@ -161,7 +163,7 @@ def answerRanks(df_analysis, Ks, Ns, file = None):
         rank[K] = {}
         for N in Ns:
             pa = properAnalysis(df_analysis, K = K, N = N, file = file)
-            rank[K][N] = pa[:min(10, len(pa))]
+            rank[K][N] = pa
             if file is None:
                 print()
             else:
@@ -173,5 +175,33 @@ def answerRanks(df_analysis, Ks, Ns, file = None):
             with open(file, "a") as f:
                 f.write("-"*40+"\n\n")
     return rank
+
+def fullTask(path1, path2, path3, Ks, Ns, verbose: bool = False, file = None):
+    if verbose:
+        print("Loading data", end="... ")
+    df, df3 = load_dataframes(path1, path2, path3)
+    if verbose:
+        print("Done!")
+        
+    if verbose:
+        print("Preprocessing", end="... ")
+    df_analysis = prepareDataset(df, df3)
+    if verbose:
+        print("Done!")
+        
+    if verbose:
+        print("Creating ranking", end="...\n\n")
+    rank = answerRanks(df_analysis, Ks, Ns, file)
+    if verbose and file is not None:
+        print("Done!")
+        
+    return rank
     
-    
+if __name__ == "__main__":
+    rank = fullTask(path1="data/title.akas.tsv.gz",
+                    path2="data/title.basics.tsv.gz",
+                    path3="data/title.ratings.tsv.gz",
+                    Ks = [1000],
+                    Ns = range(10, 201, 10),
+                    verbose = True,
+                    file = None)

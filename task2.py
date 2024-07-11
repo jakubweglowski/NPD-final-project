@@ -1,5 +1,6 @@
 import wbgapi as wb
 import pandas as pd
+from datetime import datetime
 
 from importlib import reload
 
@@ -9,22 +10,24 @@ from task1 import *
 
 import countries as ct
 
-def WorldBankRank(indicator: str):
+def WorldBankRank(indicator: str, year = datetime.now().year-1):
     
     countries_df = wb.economy.DataFrame()
     countries = dict(countries_df.loc[countries_df["aggregate"] == 0].iloc[:, 0])
     
     if indicator.lower() == 'gdp':
-        df = wb.data.DataFrame(['NY.GDP.MKTP.CD'], mrv=1).iloc[:, 0].dropna()
+        df = wb.data.DataFrame(['NY.GDP.MKTP.CD'], time=range(year, year+1)).iloc[:, 0].dropna()
     elif indicator.lower() == 'gdp pc':
-        df = wb.data.DataFrame(['NY.GDP.PCAP.CD'], mrv=1).iloc[:, 0].dropna()
+        df = wb.data.DataFrame(['NY.GDP.PCAP.CD'], time=range(year, year+1)).iloc[:, 0].dropna()
     elif indicator.lower() == 'population':
-        df = wb.data.DataFrame(['SP.POP.TOTL'], mrv=1).iloc[:, 0].dropna()
+        df = wb.data.DataFrame(['SP.POP.TOTL'], time=range(year, year+1)).iloc[:, 0].dropna()
         
     df = df.loc[df.index.isin(list(countries.keys()))]
     df.index = pd.Index([countries[x] for x in df.index])
 
     df_rank = list(df.sort_values(ascending=False).index)
+    
+    # ujednolicenie nazw krajów względem IMDb
     df_rank[df_rank.index("Russian Federation")] = "Russia"
     df_rank[df_rank.index("Korea, Rep.")] = "South Korea"
     df_rank[df_rank.index("Turkiye")] = "Turkey"
@@ -35,7 +38,10 @@ def WorldBankRank(indicator: str):
     
     return df_rank
 
-def hegemonyAnalysis(path1, path2, path3, K: int = 1000, verbose: bool = False):
+def hegemonyAnalysis(path1, path2, path3,
+                     K: int = 1000,
+                     year: int = datetime.now().year-1,
+                     verbose: bool = False):
     if verbose:
         print("Loading data", end="... ")
     df, df3 = load_dataframes(path1, path2, path3)
@@ -77,7 +83,7 @@ def hegemonyAnalysis(path1, path2, path3, K: int = 1000, verbose: bool = False):
     for indic in ['GDP', 'Population', 'GDP PC']:
         print(f"Analyzing {indic.lower()}...")
         rank_dict[indic] = {}
-        rank = WorldBankRank(indic)
+        rank = WorldBankRank(indic, year)
         for country in country_list:
             try:
                 impact_weak = rank.index(country) - rank_weak.index(country)

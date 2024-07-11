@@ -197,7 +197,7 @@ def fullTask(path1, path2, path3, Ks, Ns, verbose: bool = False, file = None):
         
     return rank
     
-if __name__ == "__main__":
+if __name__ == "__main__":  
     rank = fullTask(path1="data/title.akas.tsv.gz",
                     path2="data/title.basics.tsv.gz",
                     path3="data/title.ratings.tsv.gz",

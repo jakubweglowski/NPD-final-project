@@ -1,468 +1,4 @@
-New analysis: 2024-07-10 19:43:14.851330
-
-Threshold: 10
-Top 10 movies - ranking
-1. United States
-2. India
-3. Italy
-4. Norway
-5. El Salvador
-
-Top 20 movies - ranking
-1. United States
-2. India
-3. Spain
-4. Brazil
-5. Canada
-6. Italy
-7. Norway
-8. El Salvador
-9. Thailand
-
-Top 30 movies - ranking
-1. United States
-2. India
-3. Brazil
-4. Spain
-5. Thailand
-6. Canada
-7. Colombia
-8. United Kingdom
-9. Italy
-10. Norway
-
-Top 40 movies - ranking
-1. United States
-2. India
-3. Thailand
-4. Brazil
-5. Spain
-6. United Kingdom
-7. Canada
-8. Colombia
-9. Iran, Islamic Republic of
-10. Italy
-
-Top 50 movies - ranking
-1. United States
-2. India
-3. Thailand
-4. Brazil
-5. Spain
-6. United Kingdom
-7. Canada
-8. Colombia
-9. Iran, Islamic Republic of
-10. Italy
-
-Top 60 movies - ranking
-1. United States
-2. India
-3. Thailand
-4. Brazil
-5. Spain
-6. United Kingdom
-7. Iran, Islamic Republic of
-8. Italy
-9. Canada
-10. Colombia
-
-Top 70 movies - ranking
-1. United States
-2. India
-3. Brazil
-4. Spain
-5. Thailand
-6. United Kingdom
-7. Iran, Islamic Republic of
-8. Italy
-9. Canada
-10. Colombia
-
-Top 80 movies - ranking
-1. United States
-2. India
-3. Thailand
-4. Brazil
-5. Spain
-6. Italy
-7. United Kingdom
-8. Iran, Islamic Republic of
-9. Croatia
-10. Canada
-
-Top 90 movies - ranking
-1. United States
-2. India
-3. Spain
-4. Brazil
-5. Thailand
-6. Italy
-7. United Kingdom
-8. Iran, Islamic Republic of
-9. Canada
-10. Germany
-
-Top 100 movies - ranking
-1. United States
-2. India
-3. Spain
-4. Brazil
-5. Thailand
-6. Italy
-7. United Kingdom
-8. Iran, Islamic Republic of
-9. Canada
-10. Germany
-
-Top 110 movies - ranking
-1. United States
-2. India
-3. Spain
-4. United Kingdom
-5. Brazil
-6. Italy
-7. Thailand
-8. Iran, Islamic Republic of
-9. Canada
-10. Serbia
-
-Top 120 movies - ranking
-1. United States
-2. India
-3. United Kingdom
-4. Brazil
-5. Thailand
-6. Italy
-7. Spain
-8. Serbia
-9. Iran, Islamic Republic of
-10. Germany
-
-Top 130 movies - ranking
-1. United States
-2. India
-3. United Kingdom
-4. Brazil
-5. Thailand
-6. Spain
-7. Italy
-8. Serbia
-9. Canada
-10. Lithuania
-
-Top 140 movies - ranking
-1. United States
-2. India
-3. United Kingdom
-4. Brazil
-5. Spain
-6. Thailand
-7. Italy
-8. Serbia
-9. Iran, Islamic Republic of
-10. Japan
-
-Top 150 movies - ranking
-1. United States
-2. India
-3. United Kingdom
-4. Brazil
-5. Thailand
-6. Italy
-7. Spain
-8. Iran, Islamic Republic of
-9. Germany
-10. Serbia
-
-Top 160 movies - ranking
-1. United States
-2. India
-3. United Kingdom
-4. Brazil
-5. Thailand
-6. Italy
-7. Spain
-8. Iran, Islamic Republic of
-9. Germany
-10. Serbia
-
-Top 170 movies - ranking
-1. United States
-2. India
-3. United Kingdom
-4. Italy
-5. Brazil
-6. Thailand
-7. Spain
-8. Serbia
-9. Germany
-10. Iran, Islamic Republic of
-
-Top 180 movies - ranking
-1. United States
-2. India
-3. United Kingdom
-4. Spain
-5. Brazil
-6. Thailand
-7. Italy
-8. Germany
-9. Iran, Islamic Republic of
-10. Serbia
-
-Top 190 movies - ranking
-1. United States
-2. India
-3. United Kingdom
-4. Spain
-5. Italy
-6. Brazil
-7. Thailand
-8. Germany
-9. Iran, Islamic Republic of
-10. Serbia
-
-Top 200 movies - ranking
-1. United States
-2. India
-3. United Kingdom
-4. Spain
-5. Italy
-6. Brazil
-7. Thailand
-8. Germany
-9. Iran, Islamic Republic of
-10. Serbia
-
-----------------------------------------
-
-Threshold: 100
-Top 10 movies - ranking
-1. India
-2. United States
-
-Top 20 movies - ranking
-1. India
-2. Bosnia and Herzegovina
-3. United States
-4. Germany
-5. Spain
-6. Serbia
-
-Top 30 movies - ranking
-1. India
-2. United States
-3. Bosnia and Herzegovina
-4. Serbia
-5. Germany
-6. Spain
-
-Top 40 movies - ranking
-1. India
-2. United States
-3. Bosnia and Herzegovina
-4. United Kingdom
-5. Serbia
-6. Brazil
-7. Costa Rica
-8. Germany
-9. Spain
-10. Myanmar
-
-Top 50 movies - ranking
-1. India
-2. United States
-3. United Kingdom
-4. Bosnia and Herzegovina
-5. Serbia
-6. Albania
-7. Bangladesh
-8. Brazil
-9. Costa Rica
-10. Germany
-
-Top 60 movies - ranking
-1. India
-2. United States
-3. United Kingdom
-4. Bosnia and Herzegovina
-5. Serbia
-6. Albania
-7. Bangladesh
-8. Brazil
-9. Costa Rica
-10. Germany
-
-Top 70 movies - ranking
-1. India
-2. United States
-3. United Kingdom
-4. Bosnia and Herzegovina
-5. Serbia
-6. Albania
-7. Bangladesh
-8. Brazil
-9. Costa Rica
-10. Germany
-
-Top 80 movies - ranking
-1. India
-2. United States
-3. United Kingdom
-4. Bosnia and Herzegovina
-5. Bangladesh
-6. Serbia
-7. Myanmar
-8. South Korea
-9. Italy
-10. Iraq
-
-Top 90 movies - ranking
-1. India
-2. United States
-3. United Kingdom
-4. Bangladesh
-5. South Korea
-6. Serbia
-7. Bosnia and Herzegovina
-8. Costa Rica
-9. Germany
-10. Spain
-
-Top 100 movies - ranking
-1. India
-2. United States
-3. United Kingdom
-4. South Korea
-5. Bangladesh
-6. Italy
-7. Serbia
-8. Bosnia and Herzegovina
-9. Albania
-10. Germany
-
-Top 110 movies - ranking
-1. India
-2. United States
-3. United Kingdom
-4. South Korea
-5. Bangladesh
-6. Serbia
-7. Italy
-8. Bosnia and Herzegovina
-9. Albania
-10. Germany
-
-Top 120 movies - ranking
-1. India
-2. United States
-3. United Kingdom
-4. Serbia
-5. South Korea
-6. Bangladesh
-7. Italy
-8. Bosnia and Herzegovina
-9. Albania
-10. Germany
-
-Top 130 movies - ranking
-1. India
-2. United States
-3. United Kingdom
-4. Serbia
-5. Bangladesh
-6. South Korea
-7. Italy
-8. Albania
-9. Bosnia and Herzegovina
-10. Costa Rica
-
-Top 140 movies - ranking
-1. India
-2. United States
-3. United Kingdom
-4. Serbia
-5. Bangladesh
-6. South Korea
-7. Italy
-8. Albania
-9. Bosnia and Herzegovina
-10. Costa Rica
-
-Top 150 movies - ranking
-1. India
-2. United States
-3. United Kingdom
-4. Bangladesh
-5. Serbia
-6. South Korea
-7. Italy
-8. Iran, Islamic Republic of
-9. Albania
-10. Bosnia and Herzegovina
-
-Top 160 movies - ranking
-1. India
-2. United States
-3. United Kingdom
-4. Bangladesh
-5. Serbia
-6. South Korea
-7. Italy
-8. Turkey
-9. Bosnia and Herzegovina
-10. Iran, Islamic Republic of
-
-Top 170 movies - ranking
-1. India
-2. United States
-3. United Kingdom
-4. Bangladesh
-5. Turkey
-6. Serbia
-7. South Korea
-8. Italy
-9. Iran, Islamic Republic of
-10. Albania
-
-Top 180 movies - ranking
-1. India
-2. United States
-3. United Kingdom
-4. Bangladesh
-5. Turkey
-6. Serbia
-7. South Korea
-8. Italy
-9. Iran, Islamic Republic of
-10. Albania
-
-Top 190 movies - ranking
-1. India
-2. United States
-3. United Kingdom
-4. Bangladesh
-5. Turkey
-6. Serbia
-7. South Korea
-8. Italy
-9. Albania
-10. Iran, Islamic Republic of
-
-Top 200 movies - ranking
-1. India
-2. United States
-3. United Kingdom
-4. Bangladesh
-5. Turkey
-6. Serbia
-7. South Korea
-8. Italy
-9. Lithuania
-10. Albania
-
-----------------------------------------
+New analysis: 2024-07-11 08:35:08.618860
 
 Threshold: 1000
 Top 10 movies - ranking
@@ -484,19 +20,17 @@ Top 30 movies - ranking
 2. Turkey
 3. Bangladesh
 4. Hungary
-5. Canada
-6. Finland
-7. Croatia
-8. Latvia
-9. Romania
-10. Yugoslavia
+5. Latvia
+6. Canada
+7. Finland
+8. Croatia
 
 Top 40 movies - ranking
 1. India
-2. Bangladesh
-3. Turkey
-4. Romania
-5. Hungary
+2. Turkey
+3. Bangladesh
+4. Hungary
+5. Romania
 6. Latvia
 7. Canada
 8. Finland
@@ -513,7 +47,7 @@ Top 50 movies - ranking
 7. Latvia
 8. Canada
 9. Germany
-10. Croatia
+10. Georgia
 
 Top 60 movies - ranking
 1. India
@@ -530,9 +64,9 @@ Top 60 movies - ranking
 Top 70 movies - ranking
 1. India
 2. Turkey
-3. Bangladesh
-4. Hungary
-5. Romania
+3. Romania
+4. Bangladesh
+5. Hungary
 6. Finland
 7. Croatia
 8. Latvia
@@ -546,9 +80,9 @@ Top 80 movies - ranking
 4. Bangladesh
 5. Hungary
 6. Croatia
-7. Latvia
-8. Yugoslavia
-9. Finland
+7. Finland
+8. Latvia
+9. Yugoslavia
 10. Canada
 
 Top 90 movies - ranking
@@ -558,41 +92,41 @@ Top 90 movies - ranking
 4. Bangladesh
 5. Hungary
 6. Croatia
-7. Japan
-8. United States
-9. Latvia
-10. Finland
+7. Latvia
+8. Yugoslavia
+9. Finland
+10. Italy
 
 Top 100 movies - ranking
 1. India
 2. Turkey
 3. Romania
-4. Hungary
-5. Bangladesh
+4. Bangladesh
+5. Hungary
 6. Croatia
-7. Latvia
-8. United States
-9. Japan
-10. Finland
+7. United States
+8. Latvia
+9. Canada
+10. Japan
 
 Top 110 movies - ranking
 1. India
 2. Turkey
 3. Romania
-4. Hungary
-5. Bangladesh
-6. Croatia
-7. United States
+4. Bangladesh
+5. Hungary
+6. United States
+7. Croatia
 8. Latvia
 9. Japan
-10. Canada
+10. Yugoslavia
 
 Top 120 movies - ranking
 1. India
 2. Turkey
 3. Romania
-4. Hungary
-5. Bangladesh
+4. Bangladesh
+5. Hungary
 6. United States
 7. Croatia
 8. Japan
@@ -603,35 +137,35 @@ Top 130 movies - ranking
 1. India
 2. Turkey
 3. Romania
-4. Hungary
-5. Bangladesh
+4. Bangladesh
+5. Hungary
 6. United States
-7. Japan
-8. Italy
-9. Croatia
-10. Timor-Leste
+7. Italy
+8. Croatia
+9. Finland
+10. Japan
 
 Top 140 movies - ranking
 1. India
 2. Turkey
 3. Romania
-4. Bangladesh
-5. Hungary
+4. Hungary
+5. Bangladesh
 6. United States
 7. Italy
-8. Japan
-9. Croatia
-10. Canada
+8. Croatia
+9. Canada
+10. Finland
 
 Top 150 movies - ranking
 1. India
 2. Turkey
-3. Bangladesh
-4. Romania
-5. Hungary
-6. United States
-7. Japan
-8. Italy
+3. Romania
+4. Bangladesh
+5. Italy
+6. Hungary
+7. United States
+8. Japan
 9. Croatia
 10. Canada
 
@@ -640,8 +174,8 @@ Top 160 movies - ranking
 2. Turkey
 3. Romania
 4. Bangladesh
-5. Hungary
-6. Italy
+5. Italy
+6. Hungary
 7. United States
 8. Japan
 9. Croatia
@@ -650,50 +184,62 @@ Top 160 movies - ranking
 Top 170 movies - ranking
 1. India
 2. Turkey
-3. Romania
-4. Italy
+3. Italy
+4. Romania
 5. Hungary
 6. Bangladesh
 7. United States
 8. Japan
 9. Croatia
-10. Timor-Leste
+10. Canada
 
 Top 180 movies - ranking
 1. India
 2. Turkey
-3. Romania
-4. Hungary
-5. Italy
-6. Bangladesh
-7. Japan
-8. United States
+3. Hungary
+4. Italy
+5. Romania
+6. United States
+7. Bangladesh
+8. Japan
 9. Croatia
-10. Timor-Leste
+10. Canada
 
 Top 190 movies - ranking
 1. India
 2. Turkey
-3. Romania
-4. Italy
+3. Italy
+4. Romania
 5. Hungary
 6. Bangladesh
 7. United States
-8. Japan
-9. Croatia
+8. Croatia
+9. Japan
 10. Iran, Islamic Republic of
 
 Top 200 movies - ranking
 1. India
 2. Turkey
-3. Romania
-4. Italy
+3. Italy
+4. Romania
 5. Hungary
-6. Bangladesh
-7. United States
+6. United States
+7. Bangladesh
 8. Japan
+9. Croatia
+10. Iran, Islamic Republic of
+
+Top 146816 movies - ranking
+1. India
+2. Italy
+3. Turkey
+4. Germany
+5. France
+6. South Korea
+7. United States
+8. Sweden
 9. Iran, Islamic Republic of
-10. Croatia
+10. Spain
 
 ----------------------------------------
 

@@ -1,3 +1,6 @@
+import wbgapi as wb
+countries_wb = dict(wb.economy.DataFrame().iloc[:, 0])
+
 countries = {val: key for key, val in {
     "Afghanistan": "AF",
     "Albania": "AL",

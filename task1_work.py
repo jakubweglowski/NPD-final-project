@@ -8,8 +8,7 @@ reload(countries)
 import countries
 
 from langdetect import detect
-import translitcodec
-import codecs
+from unidecode import unidecode
 
 from datetime import datetime
 
@@ -70,7 +69,7 @@ def prepareDataset1(df, df3):
     # 1 Preprocessing
     #
     # zamieniamy wszystkie tytuły na lowercase i dekodujemy narodowe znaki
-    df["title"] = df["title"].astype(str).str.lower().apply(lambda x: codecs.encode(str(x), 'translit/short'))
+    df["title"] = df["title"].astype(str).str.lower().apply(lambda x: unidecode(str(x)))
     
     # 2 Wydobycie krajów
     #

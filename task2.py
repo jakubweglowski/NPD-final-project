@@ -40,7 +40,8 @@ def WorldBankRank(indicator: str, year = datetime.now().year-1):
 
 def hegemonyAnalysis(path1, path2, path3,
                      K: int = 1000,
-                     year: int = datetime.now().year-1,
+                     start: int = 1800,
+                     end: int = datetime.now().year,
                      verbose: bool = False):
     if verbose:
         print("Loading data", end="... ")
@@ -83,7 +84,12 @@ def hegemonyAnalysis(path1, path2, path3,
     for indic in ['GDP', 'Population', 'GDP PC']:
         print(f"Analyzing {indic.lower()}...")
         rank_dict[indic] = {}
-        rank = WorldBankRank(indic, year)
+        try:
+            rank = WorldBankRank(indic, end - 1)
+        except wb.APIResponseError as e:
+            print(f"{e}: Check if data is available for year {end - 1}.")
+            return -1
+        
         for country in country_list:
             try:
                 impact_weak = rank.index(country) - rank_weak.index(country)

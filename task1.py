@@ -154,10 +154,11 @@ def properAnalysis(df_analysis, K = 1000, N = 100, file = None):
             
     return [countries.countries[x] for x in list(ret_df)]
 
-def answerRanks(df_analysis, Ks, Ns, file = None):
+def answerRanks(df_analysis, Ks, Ns, start, end, file = None):
     if file is not None:
         with open(file, "w") as f:
-            f.write(f"New analysis: {datetime.now()}\n\n")
+            f.write(f"New analysis: {datetime.now()}\n")
+            f.write(f"Performed on period from year {start} to year {end}.\n\n")
     rank = {}
     Ns = list(Ns)
     Ns.append(df_analysis.shape[0])
@@ -206,7 +207,7 @@ def fullTask(path1, path2, path3,
         
     if verbose:
         print("Creating ranking", end="...\n\n")
-    rank = answerRanks(df_analysis, Ks, Ns, file)
+    rank = answerRanks(df_analysis, Ks, Ns, start, end, file)
     if verbose and file is not None:
         print("Done!")
         

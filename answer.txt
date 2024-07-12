@@ -1,137 +1,256 @@
-New analysis: 2024-07-12 08:35:12.779753
+New analysis: 2024-07-12 10:36:56.605754
+Performed on period from year 2000 to year 2020.
 
-Threshold: 10
+Threshold: 5000
 Top 10 movies - ranking
+1. Japan
+2. Turkey
+3. Bangladesh
+4. Croatia
+5. India
+6. Iran, Islamic Republic of
+7. Italy
+8. Mexico
 
 Top 20 movies - ranking
+1. Turkey
+2. India
+3. Iran, Islamic Republic of
+4. Japan
+5. Bangladesh
+6. Brazil
+7. Croatia
+8. Italy
+9. South Korea
+10. Mexico
 
 Top 30 movies - ranking
+1. Turkey
+2. South Korea
+3. Romania
+4. Brazil
+5. France
+6. India
+7. Iran, Islamic Republic of
+8. Japan
+9. United Arab Emirates
+10. Bangladesh
 
 Top 40 movies - ranking
+1. Turkey
+2. Iran, Islamic Republic of
+3. South Korea
+4. Brazil
+5. Romania
+6. Japan
+7. France
+8. Poland
+9. India
+10. Mexico
 
 Top 50 movies - ranking
+1. Turkey
+2. Brazil
+3. South Korea
+4. Iran, Islamic Republic of
+5. Japan
+6. Romania
+7. China
+8. Germany
+9. Poland
+10. France
 
 Top 60 movies - ranking
+1. Turkey
+2. Iran, Islamic Republic of
+3. South Korea
+4. Brazil
+5. India
+6. Germany
+7. Romania
+8. France
+9. Japan
+10. Hungary
 
 Top 70 movies - ranking
+1. Turkey
+2. Iran, Islamic Republic of
+3. Romania
+4. South Korea
+5. Brazil
+6. Germany
+7. India
+8. Hungary
+9. France
+10. Japan
 
 Top 80 movies - ranking
+1. Turkey
+2. Iran, Islamic Republic of
+3. South Korea
+4. Germany
+5. Romania
+6. Japan
+7. Brazil
+8. India
+9. Hungary
+10. Denmark
 
 Top 90 movies - ranking
+1. Turkey
+2. Iran, Islamic Republic of
+3. Germany
+4. South Korea
+5. Japan
+6. Romania
+7. India
+8. Brazil
+9. Denmark
+10. France
 
 Top 100 movies - ranking
+1. Turkey
+2. Germany
+3. Iran, Islamic Republic of
+4. South Korea
+5. India
+6. Romania
+7. Japan
+8. Brazil
+9. France
+10. Hungary
 
 Top 110 movies - ranking
+1. Turkey
+2. Germany
+3. Iran, Islamic Republic of
+4. South Korea
+5. Japan
+6. Hungary
+7. Brazil
+8. India
+9. Romania
+10. France
 
 Top 120 movies - ranking
+1. Turkey
+2. Germany
+3. Iran, Islamic Republic of
+4. Romania
+5. India
+6. South Korea
+7. Hungary
+8. Japan
+9. France
+10. Brazil
 
 Top 130 movies - ranking
+1. Turkey
+2. Germany
+3. Iran, Islamic Republic of
+4. South Korea
+5. India
+6. Romania
+7. France
+8. Italy
+9. Hungary
+10. Japan
 
 Top 140 movies - ranking
+1. Turkey
+2. Germany
+3. Iran, Islamic Republic of
+4. South Korea
+5. India
+6. Romania
+7. Brazil
+8. France
+9. Hungary
+10. Japan
 
 Top 150 movies - ranking
+1. Turkey
+2. Germany
+3. Iran, Islamic Republic of
+4. South Korea
+5. India
+6. Romania
+7. Brazil
+8. Italy
+9. France
+10. Hungary
 
 Top 160 movies - ranking
+1. Turkey
+2. Germany
+3. Iran, Islamic Republic of
+4. South Korea
+5. India
+6. Brazil
+7. Romania
+8. Italy
+9. France
+10. Hungary
 
 Top 170 movies - ranking
+1. Turkey
+2. Germany
+3. Iran, Islamic Republic of
+4. South Korea
+5. India
+6. France
+7. Brazil
+8. Romania
+9. Italy
+10. Hungary
 
 Top 180 movies - ranking
+1. Turkey
+2. Germany
+3. South Korea
+4. Iran, Islamic Republic of
+5. India
+6. France
+7. Italy
+8. Brazil
+9. Romania
+10. Japan
 
 Top 190 movies - ranking
+1. Turkey
+2. Germany
+3. South Korea
+4. Iran, Islamic Republic of
+5. India
+6. Italy
+7. France
+8. Brazil
+9. Romania
+10. Japan
 
 Top 200 movies - ranking
+1. Turkey
+2. Germany
+3. South Korea
+4. Iran, Islamic Republic of
+5. India
+6. Italy
+7. France
+8. Romania
+9. Brazil
+10. Japan
 
-Top 0 movies - ranking
-
-----------------------------------------
-
-Threshold: 100
-Top 10 movies - ranking
-
-Top 20 movies - ranking
-
-Top 30 movies - ranking
-
-Top 40 movies - ranking
-
-Top 50 movies - ranking
-
-Top 60 movies - ranking
-
-Top 70 movies - ranking
-
-Top 80 movies - ranking
-
-Top 90 movies - ranking
-
-Top 100 movies - ranking
-
-Top 110 movies - ranking
-
-Top 120 movies - ranking
-
-Top 130 movies - ranking
-
-Top 140 movies - ranking
-
-Top 150 movies - ranking
-
-Top 160 movies - ranking
-
-Top 170 movies - ranking
-
-Top 180 movies - ranking
-
-Top 190 movies - ranking
-
-Top 200 movies - ranking
-
-Top 0 movies - ranking
-
-----------------------------------------
-
-Threshold: 1000
-Top 10 movies - ranking
-
-Top 20 movies - ranking
-
-Top 30 movies - ranking
-
-Top 40 movies - ranking
-
-Top 50 movies - ranking
-
-Top 60 movies - ranking
-
-Top 70 movies - ranking
-
-Top 80 movies - ranking
-
-Top 90 movies - ranking
-
-Top 100 movies - ranking
-
-Top 110 movies - ranking
-
-Top 120 movies - ranking
-
-Top 130 movies - ranking
-
-Top 140 movies - ranking
-
-Top 150 movies - ranking
-
-Top 160 movies - ranking
-
-Top 170 movies - ranking
-
-Top 180 movies - ranking
-
-Top 190 movies - ranking
-
-Top 200 movies - ranking
-
-Top 0 movies - ranking
+Top 72728 movies - ranking
+1. Turkey
+2. Germany
+3. India
+4. Italy
+5. South Korea
+6. France
+7. Iran, Islamic Republic of
+8. Canada
+9. Japan
+10. Denmark
 
 ----------------------------------------
 

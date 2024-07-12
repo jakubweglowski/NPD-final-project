@@ -13,21 +13,29 @@ import codecs
 
 from datetime import datetime
 
-def load_dataframes(path1, path2, path3):
+def load_dataframes(path1, path2, path3, start = None, end = None):
+    
+    if start is None:
+        # zaciągamy wszystkie filmy
+        start = 1800
+    if end is None:
+        end = datetime.now().year
+        
     df1 = load_to_dataframe(path1)
     df1 = df1.drop(columns=["language", "types", "attributes"])
 
     df2 = load_to_dataframe(path2)
-    df2 = df2.loc[:, ["tconst", "titleType"]]
+    df2 = df2.loc[:, ["tconst", "titleType", "startYear"]].dropna()
+    df2 = df2.loc[df2["startYear"].astype(int).between(start, end)]
     
     df = df1.merge(df2,
-              how="left",
+              how="inner",
               left_on="titleId",
               right_on="tconst"
     )
     
     # wybieramy tylko "movie" i niektóre kolumny
-    df = df.loc[df["titleType"] == "movie", ["titleId", "title", "region", "isOriginalTitle"]]
+    df = df.loc[df["titleType"] == "movie", ["titleId", "title", "region", "startYear", "isOriginalTitle"]]
     
     df3 = load_to_dataframe(path3)
     
@@ -88,7 +96,7 @@ def prepareDataset(df, df3):
     ).query(
         "title == title_y"
     ).drop(
-        labels=["title_y", "region_y", "isOriginalTitle", "isOriginalTitle_y"],
+        labels=["title_y", "region_y", "startYear_y", "isOriginalTitle", "isOriginalTitle_y"],
         axis=1
     )
 
@@ -176,10 +184,17 @@ def answerRanks(df_analysis, Ks, Ns, file = None):
                 f.write("-"*40+"\n\n")
     return rank
 
-def fullTask(path1, path2, path3, Ks, Ns, verbose: bool = False, file = None):
+def fullTask(path1, path2, path3,
+             start: int = None,
+             end: int = None,
+             Ks: list = [5000],
+             Ns: list = range(10, 201, 10),
+             verbose: bool = False,
+             file: str = None):
+    
     if verbose:
         print("Loading data", end="... ")
-    df, df3 = load_dataframes(path1, path2, path3)
+    df, df3 = load_dataframes(path1, path2, path3, start, end)
     if verbose:
         print("Done!")
         

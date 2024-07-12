@@ -4,9 +4,9 @@ from datetime import datetime
 
 from importlib import reload
 
-import task1
-reload(task1)
-from task1 import *
+import task1_work
+reload(task1_work)
+from task1_work import *
 
 import countries as ct
 

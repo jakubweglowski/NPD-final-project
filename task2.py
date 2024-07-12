@@ -27,7 +27,7 @@ def WorldBankRank(indicator: str, year = datetime.now().year-1):
 
     df_rank = list(df.sort_values(ascending=False).index)
     
-    # ujednolicenie nazw krajów względem IMDb
+    # ujednolicenie nazw niektórych krajów względem IMDb
     df_rank[df_rank.index("Russian Federation")] = "Russia"
     df_rank[df_rank.index("Korea, Rep.")] = "South Korea"
     df_rank[df_rank.index("Turkiye")] = "Turkey"
@@ -38,24 +38,30 @@ def WorldBankRank(indicator: str, year = datetime.now().year-1):
     
     return df_rank
 
-def hegemonyAnalysis(path1, path2, path3,
-                     K: int = 1000,
+def prepareDataset2(path1, path2, path3,
                      start: int = 1800,
                      end: int = datetime.now().year,
                      verbose: bool = False):
     if verbose:
         print("Loading data", end="... ")
-    df, df3 = load_dataframes(path1, path2, path3)
+    df, df3 = load_dataframes(path1, path2, path3, start, end)
     if verbose:
         print("Done!")
         
     if verbose:
         print("Preprocessing", end="... ")
-    df_analysis = prepareDataset(df, df3)
+    df_analysis = prepareDataset1(df, df3)
     if verbose:
         print("Done!")
+        
+    return df_analysis, end
     
-    df_analysis = df_analysis.loc[df_analysis["numVotes"] > K]
+def hegemonyAnalysis(df, 
+                     end: int,
+                     K: int = 5000,
+                     verbose: bool = False):
+    
+    df_analysis = df.loc[df["numVotes"] > K].copy()
 
     if verbose:
         print("Computing cinematic impacts", end="... ")
@@ -82,9 +88,12 @@ def hegemonyAnalysis(path1, path2, path3,
     # dataframes with hegemonies
     rank_dict = {}
     for indic in ['GDP', 'Population', 'GDP PC']:
-        print(f"Analyzing {indic.lower()}...")
+        if verbose:
+            print(f"Analyzing {indic.lower()}...")
         rank_dict[indic] = {}
         try:
+            # zaciągamy dane z roku wcześniejszego
+            # z aktualnego prawie na pewno nie są jeszcze dostępne
             rank = WorldBankRank(indic, end - 1)
         except wb.APIResponseError as e:
             print(f"{e}: Check if data is available for year {end - 1}.")

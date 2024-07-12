@@ -13,13 +13,7 @@ import codecs
 
 from datetime import datetime
 
-def load_dataframes(path1, path2, path3, start = None, end = None):
-    
-    if start is None:
-        # zaciągamy wszystkie filmy
-        start = 1800
-    if end is None:
-        end = datetime.now().year
+def load_dataframes(path1, path2, path3, start: int = 1800, end = datetime.now().year):
         
     df1 = load_to_dataframe(path1)
     df1 = df1.drop(columns=["language", "types", "attributes"])
@@ -48,7 +42,9 @@ def mydetect(x):
     except:
         return pd.NA
 
-# funkcje do .apply()
+# funkcja do .apply()
+# służy do naprawy błędu przyporządkowywania filmu
+# jako pochodzącego z Ekwadoru
 def myfunc_EC(x):
     # jeśli język to hiszpański, możemy założyć że film jest rzeczywiście z Ekwadoru
     # jeśli nie, to bierzemy nasz najlepszy strzał jako kraj pochodzenia
@@ -56,20 +52,12 @@ def myfunc_EC(x):
     if x[5] != 'ES':
         x[2] = x[5]
     return x
-
-def myfunc_TR(x):
-    # jeśli język to turecki, możemy założyć że film jest rzeczywiście z Turcji
-    # jeśli nie, to bierzemy nasz najlepszy strzał jako kraj pochodzenia
-    # bo inaczej nie jesteśmy w stanie go odzyskać
-    if x[5] != 'TR':
-        x[2] = x[5]
-    return x
     
 def languageModel(df_analysis):
     
     ret_df = df_analysis.copy()
     
-    # usuwamy dziwne filmy z Ekwadoru
+    # usuwamy dziwne filmy z Ekwadoru, które tak naprawdę nie są z Ekwadoru
     df_EC = ret_df.loc[ret_df["region"] == 'EC'].copy()
     df_EC.loc[:, "detected"] = df_EC["title"].apply(mydetect)
     df_EC = df_EC.apply(myfunc_EC, axis=1).drop(columns=["detected"]).dropna()
@@ -77,7 +65,7 @@ def languageModel(df_analysis):
     
     return ret_df
 
-def prepareDataset(df, df3):
+def prepareDataset1(df, df3):
     
     # 1 Preprocessing
     #
@@ -201,7 +189,7 @@ def fullTask(path1, path2, path3,
         
     if verbose:
         print("Preprocessing", end="... ")
-    df_analysis = prepareDataset(df, df3)
+    df_analysis = prepareDataset1(df, df3)
     if verbose:
         print("Done!")
         

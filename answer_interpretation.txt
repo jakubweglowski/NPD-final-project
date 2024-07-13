@@ -1,0 +1,6 @@
+Ad. task 1:
+    - gdy ustawimy mały 'threshold', to na pierwszym miejscu dla każdej liczby filmów jest USA
+    - gdy zwiększymy 'threshold', na pierwszym miejscu jest Turcja, wysoko są Indie, Japonia i Włochy
+
+Ad. task 2:
+    - 

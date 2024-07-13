@@ -2,13 +2,8 @@ import wbgapi as wb
 import pandas as pd
 from datetime import datetime
 
-from importlib import reload
-
-import task1_work
-reload(task1_work)
-from task1_work import *
-
-import countries as ct
+from final_files.task1 import *
+import final_files.countries as ct
 
 def WorldBankRank(indicator: str, year = datetime.now().year-1):
     
@@ -26,15 +21,6 @@ def WorldBankRank(indicator: str, year = datetime.now().year-1):
     df.index = pd.Index([countries[x] for x in df.index])
 
     df_rank = list(df.sort_values(ascending=False).index)
-    
-    # ujednolicenie nazw niektórych krajów względem IMDb
-    df_rank[df_rank.index("Russian Federation")] = "Russia"
-    df_rank[df_rank.index("Korea, Rep.")] = "South Korea"
-    df_rank[df_rank.index("Turkiye")] = "Turkey"
-    df_rank[df_rank.index("Iran, Islamic Rep.")] = "Iran, Islamic Republic of"
-    df_rank[df_rank.index("Hong Kong SAR, China")] = "Hong Kong"
-    df_rank[df_rank.index("Macao SAR, China")] = "Macao"
-    df_rank[df_rank.index("Slovak Republic")] = "Slovakia"
     
     return df_rank
 

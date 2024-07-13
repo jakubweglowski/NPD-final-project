@@ -1,23 +1,24 @@
-from importlib import reload
 import numpy as np
 import pandas as pd
-from load_data import *
-
-import countries
-reload(countries)
-import countries
+from final_files.load_data import *
+import final_files.countries as countries
 
 from langdetect import detect
 from unidecode import unidecode
 
 from datetime import datetime
 
+import warnings
+warnings.filterwarnings('ignore')
+
 def load_dataframes(path1, path2, path3, start: int = 1800, end = datetime.now().year):
         
     df1 = load_to_dataframe(path1)
+    assert df1.shape[0] > 0, "No observations in the dataset"
     df1 = df1.drop(columns=["language", "types", "attributes"])
-
+    
     df2 = load_to_dataframe(path2)
+    assert df2.shape[0] > 0, "No observations in the dataset"
     df2 = df2.loc[:, ["tconst", "titleType", "startYear"]].dropna()
     df2 = df2.loc[df2["startYear"].astype(int).between(start, end)]
     
@@ -29,8 +30,10 @@ def load_dataframes(path1, path2, path3, start: int = 1800, end = datetime.now()
     
     # wybieramy tylko "movie" i niektóre kolumny
     df = df.loc[df["titleType"] == "movie", ["titleId", "title", "region", "startYear", "isOriginalTitle"]]
+    assert df.shape[0] > 0, "No observations in the dataset"
     
     df3 = load_to_dataframe(path3)
+    assert df3.shape[0] > 0, "No observations in the dataset"
     
     return df, df3
 
@@ -173,8 +176,8 @@ def answerRanks(df_analysis, Ks, Ns, start, end, file = None):
     return rank
 
 def fullTask(path1, path2, path3,
-             start: int = None,
-             end: int = None,
+             start: int = 1800,
+             end: int = datetime.now().year,
              Ks: list = [5000],
              Ns: list = range(10, 201, 10),
              verbose: bool = False,

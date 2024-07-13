@@ -14,4 +14,4 @@ Plik 'output.pstats' zawiera wynik działania profilera. Można go otworzyć po 
 
 Paczkę można pobrać używając komendy:
 
-*pip install ./dist/npd-final-project-1.0-py3-none-any.whl*
+*pip install ./dist/npd-final-project-1.0.tar.gz*

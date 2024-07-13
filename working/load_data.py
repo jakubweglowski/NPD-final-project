@@ -30,13 +30,11 @@ def load_to_dataframe(path_to_file: str) -> pd.DataFrame:
 
 if __name__ == "__main__":
     url = "https://datasets.imdbws.com/" # should end with "/"
-    filename = "name.basics.tsv.gz"
-    output_path = f"data/{filename}"
-    
+    filenames = ["name.basics.tsv.gz",
+                 "title.basics.tsv.gz",
+                 "title.akas.tsv.gz",
+                 "title.ratings.tsv.gz"]
+    output_path = "data/"
     download_file(url, filename, output_path)
-    
-    path_to_file = output_path
-    df = load_to_dataframe(path_to_file)
-    print(df.head())
     
     

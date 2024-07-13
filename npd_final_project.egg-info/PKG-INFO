@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: npd-final-project
+Version: 1.0
+Author: Jakub Węgłowski
+Author-email: jw430620@students.mimuw.edu.pl
+Requires-Dist: pandas
+Requires-Dist: wbgapi
+Requires-Dist: datetime
+Requires-Dist: numpy
+Requires-Dist: langdetect
+Requires-Dist: unidecode
+Requires-Dist: snakeviz

@@ -1,0 +1,7 @@
+pandas
+wbgapi
+datetime
+numpy
+langdetect
+unidecode
+snakeviz

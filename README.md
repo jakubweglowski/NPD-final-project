@@ -10,4 +10,8 @@ Plik 'answers_interpretation' zawiera tekstowe podsumowanie zadania.
 
 Plik 'output.pstats' zawiera wynik działania profilera. Można go otworzyć po zainstalowaniu biblioteki 'snakeviz' za pomocą komendy:
 
-snakeviz output.pstats
+*snakeviz output.pstats*
+
+Paczkę można pobrać używając komendy:
+
+*pip install ./dist/npd-final-project-1.0-py3-none-any.whl*
